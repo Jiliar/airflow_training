@@ -1,0 +1,16 @@
+{
+  "owner": "Jiliar Silgado",
+  "api_url": "https://my.api.mockaroo.com/sales_db.json",
+  "api_key": "f039c280",
+  "output_path_bash": "/tmp/sales_db_bash.csv",
+  "output_path_python": "/tmp/sales_db_py.csv",
+  "output_path_transform": "/tmp/sales_data_transformed.csv",
+  "conn_id": "postgresql_docker_conn",
+  "sql_creation_file": "resources/sql/001_check_exists_and_create_table.sql",
+  "table_name": "sales_data",
+  "depends_on_past": false,
+  "email_on_failure": false,
+  "email_on_retry": false,
+  "retries": 1,
+  "retry_delay_minutes": 2
+}
