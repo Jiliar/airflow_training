@@ -3,20 +3,6 @@
 
 Este repositorio contiene el material, código fuente y ejemplos prácticos desarrollados durante una capacitación completa en **Apache Airflow**, enfocado en la orquestación de pipelines de datos para entornos modernos de ingeniería de datos.
 
-## 📘 Contenidos Aprendidos
-
-Durante el entrenamiento, se abordaron los siguientes temas:
-
-- ✅ ¿Qué es la orquestación de data pipelines?
-- ✅ Introducción a Apache Airflow
-- ✅ ¿Qué es un DAG (Directed Acyclic Graph)?
-- ✅ Componentes principales de Airflow
-- ✅ Uso de operadores (BashOperator, PythonOperator, BranchOperator, etc.)
-- ✅ ¿Qué son los providers?
-- ✅ Sensores y Branching en DAGs
-- ✅ Orquestación de pipelines en GCP con Airflow
-- ✅ Buenas prácticas de ingeniería de datos y uso de DataOps
-
 ## 🧪 Versión de Airflow utilizada
 
 La versión usada en este proyecto fue:
