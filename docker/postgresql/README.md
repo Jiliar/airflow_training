@@ -1,6 +1,3 @@
-Aquí tienes el archivo Markdown completo con todos los comandos explícitos y sin abreviaciones:
-
-```markdown
 # 🐳 Configuración de Red y Contenedores para Airflow con PostgreSQL
 
 ## 🔄 Paso 1: Detener servicios existentes
