@@ -1,2 +1,2 @@
-docker-compose -p airflow-training -f docker/airflow/docker-compose.yml down
-docker-compose -p airflow-training -f docker/airflow/docker-compose.yml up -d
+docker-compose -p airflow-training --env-file .env -f docker/airflow/docker-compose-root-output.yaml up -d
+docker-compose -p airflow-training --env-file .env -f docker/airflow/docker-compose-root-output.yaml down
