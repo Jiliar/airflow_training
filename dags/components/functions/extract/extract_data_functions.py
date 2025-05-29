@@ -3,16 +3,6 @@ import requests
 
 from components.functions.i_extract import IExtractData
 
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
-handler = logging.StreamHandler()
-formatter = logging.Formatter(
-    fmt='%(asctime)s [%(levelname)s] %(name)s - %(filename)s:%(lineno)d - %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S'
-)
-handler.setFormatter(formatter)
-logger.addHandler(handler)
-
 class ExtractFunctions(IExtractData):
     def __init__(self, api_url: str, api_key: str, output_path_bash: str, output_path_python: str):
         self.api_url = api_url
