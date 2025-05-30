@@ -3,19 +3,13 @@ from airflow.providers.postgres.hooks.postgres import PostgresHook
 from components.functions.i_load import ILoader
 
 class PostgresLoader(ILoader):
-    def __init__(self, conn_id='postgresql_docker_conn', table='sales_data', csv_file='/tmp/sales_data_transformed.csv'):
-        self.conn_id = conn_id
-        self.table = table
-        self.csv_file = csv_file
-
-from airflow.providers.postgres.hooks.postgres import PostgresHook
-
-class PostgresLoader:
-    def __init__(self, conn_id, table, csv_file, columns=['ddate', 'store', 'sales', 'created_at']):
+    def __init__(self, conn_id='postgresql_docker_conn', table='sales_data', csv_file='/tmp/sales_data_transformed.csv',  
+                 columns=['ddate', 'store', 'sales', 'created_at']):
         self.conn_id = conn_id
         self.table = table
         self.csv_file = csv_file
         self.columns = columns
+
 
     def load(self):
         pd_hook = PostgresHook(postgres_conn_id=self.conn_id)
