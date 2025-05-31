@@ -4,7 +4,7 @@ import requests
 from components.functions.i_extract import IExtractData
 
 class ExtractFunctions(IExtractData):
-    def __init__(self, api_url: str, api_key: str, output_path_bash: str, output_path_python: str):
+    def __init__(self, api_url: str, api_key: str, output_path_bash: str = None, output_path_python: str = None):
         self.api_url = api_url
         self.api_key = api_key
         self.output_path_bash = output_path_bash

@@ -1,0 +1,68 @@
+{
+  "owner": "airflow",
+  "depends_on_past": false,
+  "email_on_failure": false,
+  "email_on_retry": false,
+  "retries": 1,
+  "retry_delay_minutes": 2,
+  "sql_view_creation_file": "resources/sql/002_marketing_analysis_gcp.sql",
+  "api_url": {
+    "facebook": "https://my.api.mockaroo.com/marketing_campaing.json",
+    "instagram": "https://my.api.mockaroo.com/marketing_campaing.json",
+    "tiktok": "https://my.api.mockaroo.com/marketing_campaing.json",
+    "youtube": "https://my.api.mockaroo.com/marketing_campaing.json"
+  },
+  "api_key": "f039c280",
+  "gcp_conn_id": "google_cloud_conn",
+  "bucket": "marketing-analysis-bucket",
+  "destination_template_path": "data/{file}",
+  "output_template_file_path": "/tmp/{platform}_data.csv",
+  "bigquery_dataset": "marketing",
+  "platforms": ["facebook", "instagram", "tiktok", "youtube"],
+  "schemas": {
+    "facebook": [
+      {"name": "date", "type": "DATE"},
+      {"name": "country", "type": "STRING"},
+      {"name": "city", "type": "STRING"},
+      {"name": "gender", "type": "STRING"},
+      {"name": "campaign", "type": "STRING"},
+      {"name": "clicks", "type": "INTEGER"},
+      {"name": "views", "type": "INTEGER"},
+      {"name": "sales", "type": "INTEGER"},
+      {"name": "costs", "type": "FLOAT"}
+    ],
+    "instagram": [
+      {"name": "date", "type": "DATE"},
+      {"name": "country", "type": "STRING"},
+      {"name": "city", "type": "STRING"},
+      {"name": "gender", "type": "STRING"},
+      {"name": "campaign", "type": "STRING"},
+      {"name": "clicks", "type": "INTEGER"},
+      {"name": "views", "type": "INTEGER"},
+      {"name": "sales", "type": "INTEGER"},
+      {"name": "costs", "type": "FLOAT"}
+    ],
+    "tiktok": [
+      {"name": "date", "type": "DATE"},
+      {"name": "country", "type": "STRING"},
+      {"name": "city", "type": "STRING"},
+      {"name": "gender", "type": "STRING"},
+      {"name": "campaign", "type": "STRING"},
+      {"name": "clicks", "type": "INTEGER"},
+      {"name": "views", "type": "INTEGER"},
+      {"name": "sales", "type": "INTEGER"},
+      {"name": "costs", "type": "FLOAT"}
+    ],
+    "youtube": [
+      {"name": "date", "type": "DATE"},
+      {"name": "country", "type": "STRING"},
+      {"name": "city", "type": "STRING"},
+      {"name": "gender", "type": "STRING"},
+      {"name": "campaign", "type": "STRING"},
+      {"name": "clicks", "type": "INTEGER"},
+      {"name": "views", "type": "INTEGER"},
+      {"name": "sales", "type": "INTEGER"},
+      {"name": "costs", "type": "FLOAT"}
+    ]
+  }
+}

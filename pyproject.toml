@@ -9,10 +9,10 @@ readme = "README.md"
 requires-python = ">=3.12,<3.13"
 dependencies = [
     "apache-airflow (>=3.0.1,<4.0.0)",
-    "pandas (>=2.2.3,<3.0.0)",
+    "pandas (>=2.1.2,<2.2)",
     "apache-airflow-providers-postgres (>=6.2.0,<7.0.0)",
+    "apache-airflow-providers-google (>=15.1.0,<16.0.0)",
 ]
-
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

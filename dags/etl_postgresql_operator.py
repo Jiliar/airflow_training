@@ -22,7 +22,7 @@ from components.functions.load.postgresql_loader import PostgresLoader
 
 from utils.config_loader import ConfigLoader
 
-config_loader = ConfigLoader(f"dags/resources/config/properties.json")
+config_loader = ConfigLoader(f"dags/resources/config/postgresql_operator_prop.json")
 
 # Configure logging
 default_args = {
