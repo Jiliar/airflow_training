@@ -33,7 +33,7 @@ with DAG(
     description='A simple dummy DAG for simulating sensors monitoring in an industry',
     start_date=datetime(2025, 1, 1),
     end_date=datetime(2025, 12, 31),
-    schedule='@hourly',
+    schedule='@weekly',
     tags=['Industry Sensors', 'Engineering']
 ) as dag:
     
